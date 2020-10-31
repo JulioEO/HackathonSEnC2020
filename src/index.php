@@ -22,13 +22,14 @@
     </div><!-- header -->
     <div class="login-form">
         <form action="login.php" method="POST">
+            <label for="email">Email</label>
             <input type="text" name="email" placeholder="E-mail" required />
-            <input type="password" name="passwd" placeholder="Senha" required />
-            <input type="checkbox" name="connected" />
+            <label for="passwd">Senha</label><input type="password" name="passwd" placeholder="Senha" required />
+            <input type="checkbox" name="connected" /><label for="connected"> Mantenha-me conectado</label>
             <input type="submit" value="Entrar" />
         </form>
-        <h3>Sou um administrador</h3>
-        <h3>Esqueci a senha</h3>
+        <a href=""><h3>Sou um administrador</h3></a>
+        <a href=""><h3>Esqueci a senha</h3></a>
     </div><!-- login-form -->
 </body>
 </html>
