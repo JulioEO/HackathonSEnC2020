@@ -1,10 +1,5 @@
 <?php
     session_start();
-
-    if (isset($_COOKIE['error'])) {
-        alert("Login inválido.");
-        $_COOKIE['error'] = '';
-    }
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +24,7 @@
             <input type="submit" value="Entrar" />
         </form>
         <a href=""><h3>Sou um administrador</h3></a>
-        <a href=""><h3>Esqueci a senha</h3></a>
+        <a href=""><h3>Esqueci a senha <i class="fas fa-lock"></i></h3></a>
     </div><!-- login-form -->
 </body>
 </html>

@@ -3,8 +3,6 @@
 
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
     $passwd = filter_input(INPUT_POST, 'passwd', FILTER_SANITIZE_SPECIAL_CHARS);
-
-    
 ?>
 
 <!DOCTYPE html>
