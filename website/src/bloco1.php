@@ -14,7 +14,7 @@
 <body>
     <div class="nav-header">
         <i class="fas fa-bars"></i>
-        <h1>Bloco 1</h1>
+        <h1 class="cor2">Bloco 1</h1>
     </div><!-- nav-header -->
     <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->
     <div class="search-data">

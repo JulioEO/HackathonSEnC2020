@@ -20,11 +20,13 @@ form {
 .cor{
   text-align: center;
   color: white;
+  text-decoration: underline;
   }
   
- label{
+.label{
   color: white;
   }
+  
   
 .cor2{
 	position:down;
@@ -64,4 +66,40 @@ form {
 	height: 600px;
 	max-width: 100%;
 	min-height: 280px;
+}
+
+.nav-header{
+background-color: #2A2B2F;
+}
+
+.buttons{
+	background-color: #C4C4C4;
+	border: none;
+	color: black;
+	padding:15px 32px;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.maincontainer{
+	display:flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	}
+	
+.search-data{
+color: #EDEFF2;
+}
+
+input[type=datetime-local] {
+    background-color: 
+}
+
+.functions-container{
+	background-color: #C4C4C4;
 }

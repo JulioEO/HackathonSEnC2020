@@ -14,7 +14,7 @@
 <body>
     <div class="nav-header">
         <i class="fas fa-bars"></i>
-        <h1>Sala 1-004</h1>
+        <h1 class="cor2">Sala 1-004</h1>
     </div><!-- nav-header -->
     <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->
     <?php for ($i = 0; $i <3; $i++) { ?>

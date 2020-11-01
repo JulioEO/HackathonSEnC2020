@@ -20,7 +20,7 @@
     <div class="header">
 	<br />
         <img src="../assets/images/logoSSI.png" alt="logo" />
-        <h1 class="cor">SSI</h1>
+        <h1 class="cor2">SSI</h1>
     </div><!-- header -->
     <div class="login-form">
         <form action="login.php" method="POST">
@@ -28,12 +28,12 @@
 			<br />
 			<input class="inputInsert" type="password" name="passwd" placeholder="Senha" required />
 			<br />
-            <input type="checkbox" name="connected" /><label class="cor" for="connected"> Mantenha-me conectado</label>
+            <input type="checkbox" name="connected" /><label class="cor2" for="connected"> Mantenha-me conectado</label>
 			<br /> <br />
             <input class="inputInsert" type="submit" value="Entrar" />
         </form>
-        <a href=""><h3 class="cor" styles>Sou um administrador</h3></a>
-        <a href=""><h3 class="cor">Esqueci a senha</h3></a>
+        <a href=""><h3 class="cor" >Sou um administrador</h3></a>
+        <a href=""><h3 class="cor2">Esqueci a senha</h3></a>
     </div>
 	</div> <!-- login-form -->
 </body>
