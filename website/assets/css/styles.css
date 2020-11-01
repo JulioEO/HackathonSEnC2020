@@ -64,3 +64,13 @@ input{
 	max-width: 100%;
 	min-height: 280px;
 }
+
+
+/******* CONFIRM MODAL SCRIPT *******/
+.confirm {
+  position: absolute;
+  z-index: 5;
+  top: 30vh;
+  left: 500px;
+  right: 500px;
+}

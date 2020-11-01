@@ -17,19 +17,19 @@
         <h1>Bloco 1</h1>
     </div><!-- nav-header -->
     <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->
-    <div class="search-data">
-        <input type="datetime-local" name="date" />
-    </div>
-    <?php for ($i = 1; $i < 10; $i++) { ?>
-        <div class="buttons">
-            <button id="btnSala">Sala <?php echo "1-00" . $i; ?></button>
-        </div><!-- buttons -->
-    <?php } ?>
-    
-    <div class="overlay"></div>
+        <div class="search-data">
+            <input type="datetime-local" name="date" id="date" />
+        </div>
+        <?php for ($i = 1; $i < 10; $i++) { ?>
+            <div class="buttons">
+                <button id="btnSala100<?php echo $i; ?>" >Sala <?php echo "1-00" . $i; ?></button>
+            </div><!-- buttons -->
+        <?php } ?>
+        
+        <div class="overlay"></div>
         <div class="confirm">
             <form action="sala1004.php" method="GET">
-                <h2>Confirma a reserva para </h2>
+                <h2>Confirma a reserva para a sala 1-004 às 19h no dia 03/11/2020?</h2>
                 <input type="submit" value="Confirmar" />
             </form>
         </div><!-- confirm -->
