@@ -1,4 +1,4 @@
-body{
+.telalogin{
 	background-color: #505050;
 }
 
@@ -17,12 +17,16 @@ form {
 	margin: 0 auto;
 }
 
-h1{
+.cor{
   text-align: center;
   color: white;
   }
   
-p{
+ label{
+  color: white;
+  }
+  
+.cor2{
 	position:down;
   text-align: center;
   color: white;
@@ -39,11 +43,8 @@ p{
   cursor: pointer;
 }
 
-input [type="checkbox"]{
-	position: sticky;
-}
 
-input{
+.inputInsert{
     width:300px;
     padding:15px;
     margin:5px;
