@@ -1,5 +1,6 @@
 let btnMinus = document.querySelector('#minus');
 let btnPlus = document.querySelector('#plus');
+let btnPower = document.querySelector('#power');
 let tempElement = document.querySelector('.temp-container span');
 
 btnMinus.addEventListener('click', function() {
@@ -9,5 +10,23 @@ btnMinus.addEventListener('click', function() {
     }
 
     tempElement.innerHTML = temp + " °C";
-    console.log(temp);
+});
+
+btnPlus.addEventListener('click', function() {
+    let temp = Number(tempElement.innerHTML.substring(0,2));
+    if (temp < 25) {
+        temp += 1;
+    }
+
+    tempElement.innerHTML = temp + " °C";
+});
+
+btnPower.addEventListener('click', function() {
+    if (this.classList.contains('white')) {
+        this.classList.remove('white');
+        this.style.color = "#000000";
+    } else {
+        this.style.color = "#ffffff";
+        this.classList.add('white');
+    }
 });
