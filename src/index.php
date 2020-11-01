@@ -16,19 +16,25 @@
     <title>Rocket</title>
 </head>
 <body>
+<div class="container" id="container">
     <div class="header">
-        <img src="../assets/images/logo.jpg" alt="logo" />
+		<br />
+        <img src="../assets/images/logoSSI.png" alt="logo" />
         <h1>SSI</h1>
     </div><!-- header -->
-    <div class="login-form">
+    <div class="form" class="login-form">
         <form action="login.php" method="POST">
             <input type="text" name="email" placeholder="E-mail" required />
+			<br /> <br />
             <input type="password" name="passwd" placeholder="Senha" required />
-            <input type="checkbox" name="connected" />
+			<br />
+            <input type="checkbox" name="connected" /> <p> mantenha-me conectado </p>
+			<br />
             <input type="submit" value="Entrar" />
         </form>
-        <h3>Sou um administrador</h3>
-        <h3>Esqueci a senha</h3>
-    </div><!-- login-form -->
+        <p text-decoration:underline;>Sou um administrador</p>
+        <p>Esqueci a senha</p>
+    </div> 
+</div><!-- login-form -->
 </body>
 </html>
