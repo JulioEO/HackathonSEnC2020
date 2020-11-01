@@ -24,6 +24,7 @@
     </div><!-- header -->
     <div class="form" class="login-form">
         <form action="login.php" method="POST">
+            <label for="email">Email</label>
             <input type="text" name="email" placeholder="E-mail" required />
 			<br /> <br />
             <input type="password" name="passwd" placeholder="Senha" required />
