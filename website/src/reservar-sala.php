@@ -13,14 +13,15 @@
 </head>
 <body>
     <div class="nav-header">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" style="font-size:20px;color:white"></i>
         <h1 class="cor2">ICMC - Instituto de Ciências Matemáticas e de Computação</h1>
+		<br />
     </div><!-- nav-header -->
     <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->
 
     <?php for ($i = 1; $i < 9; $i++) { ?>
         <div class="buttons">
-            <a href="bloco<?php echo $i; ?>.php">Bloco <?php echo $i; ?></a>
+            <a href="bloco<?php echo $i; ?>.php"> Bloco <?php echo $i; ?></a>
         </div><!-- buttons -->
     <?php } ?>
 

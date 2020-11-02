@@ -13,13 +13,14 @@
 </head>
 <body>
     <div class="nav-header">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" style="font-size:20px;color:white"></i>
         <h1 class="cor2">Bloco 1</h1>
     </div><!-- nav-header -->
-    <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->
-    <div class="search-data">
+	<br />
+	<div class="search-data">
         <input type="datetime-local" name="date" />
     </div>
+    <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->
     <?php for ($i = 1; $i < 10; $i++) { ?>
         <div class="buttons">
             <button id="btnSala">Sala <?php echo "1-00" . $i; ?></button>
@@ -27,13 +28,14 @@
     <?php } ?>
     
     <div class="overlay"></div>
-        <div class="confirm">
+    </div><!-- main-container -->
+	<div class="confirm">
             <form action="sala1004.php" method="GET">
+			<br />
                 <h2>Confirma a reserva para </h2>
                 <input type="submit" value="Confirmar" />
             </form>
         </div><!-- confirm -->
-    </div><!-- main-container -->
     <script src="../assets/js/scripts.js"></script>
 </body>
 </html>

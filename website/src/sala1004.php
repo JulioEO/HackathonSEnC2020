@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="nav-header">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" style="font-size:20px;color:white"></i>
         <h1 class="cor2">Sala 1-004</h1>
     </div><!-- nav-header -->
     <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->

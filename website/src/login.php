@@ -18,9 +18,10 @@
 </head>
 <body>
     <div class="nav-header">
-        <h1 class="label" >Olá, admin!</h1>
-        <i class="fas fa-bars"></i>
+        <h2 class="label" >Olá, usuário!</h2>
+        <i class="fas fa-bars" style="font-size:20px;color:white"></i>
         <h1 class="cor2">ICMC - Instituto de Ciências Matemáticas e de Computação</h1>
+		<br />
     </div><!-- nav-header -->
     <div class="main-container"> <!-- main-container terá display flex pra ficar responsivo -->
         <div class="buttons">
