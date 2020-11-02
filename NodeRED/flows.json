@@ -1,0 +1,1035 @@
+[
+    {
+        "id": "4f9847c9.a2ee6",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e8da56b.3bf01a8",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6202c565.fc4a84",
+        "type": "wiotp-credentials",
+        "name": "",
+        "org": "bb",
+        "serverName": "bb",
+        "devType": "bb",
+        "devId": "a1",
+        "keepalive": "60",
+        "cleansession": true,
+        "tls": "",
+        "usetls": false
+    },
+    {
+        "id": "bfad11fe.f246",
+        "type": "http in",
+        "z": "4f9847c9.a2ee6",
+        "name": "mostrar salas",
+        "url": "/salas",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "95112e97.73f24"
+            ]
+        ]
+    },
+    {
+        "id": "ce5a0466.ef382",
+        "type": "http response",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "95112e97.73f24",
+        "type": "file in",
+        "z": "4f9847c9.a2ee6",
+        "name": "lista",
+        "filename": "D:\\coisas de prog\\lista_de_salas.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "32fc4288.d53d76"
+            ]
+        ]
+    },
+    {
+        "id": "56d03f64.8e22f8",
+        "type": "debug",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "71c663a5.292afc",
+        "type": "change",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32fc4288.d53d76",
+        "type": "template",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <head>\n    <title>salas</title>\n    </head>\n    <body>\n        <h1> salas</h1>\n    <p>{{ payload }}</p>\n    </body>\n</html>",
+        "output": "str",
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "ce5a0466.ef382",
+                "56d03f64.8e22f8"
+            ]
+        ]
+    },
+    {
+        "id": "7ac97241.9ef7fc",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB1",
+        "x": 850,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ade84f7a.1886b8",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB2",
+        "x": 850,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1a313bf9.c51ffc",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB3",
+        "x": 850,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "a5a6813f.53893",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA1",
+        "x": 850,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "89bdd501.1776d",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA2",
+        "x": 850,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "506f928d.528864",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA3",
+        "x": 850,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "92a96b8a.b5159",
+        "type": "switch",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "property": "req.query.sala",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "a1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a6",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "a5a6813f.53893"
+            ],
+            [
+                "89bdd501.1776d"
+            ],
+            [
+                "506f928d.528864"
+            ],
+            [
+                "7ac97241.9ef7fc"
+            ],
+            [
+                "ade84f7a.1886b8"
+            ],
+            [
+                "1a313bf9.c51ffc"
+            ]
+        ]
+    },
+    {
+        "id": "7aee140.d0640ec",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB1",
+        "x": 850,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "b13de782.c6ddc",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB2",
+        "x": 850,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c7680fed.33bbf8",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB3",
+        "x": 850,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d7df332f.faf868",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA1",
+        "x": 850,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "885ffffa.080e18",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA2",
+        "x": 850,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "2712672c.1d13f8",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA3",
+        "x": 850,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "debb5c44.eafe48",
+        "type": "switch",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "property": "req.query.sala",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "a1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a6",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 330,
+        "y": 880,
+        "wires": [
+            [
+                "d7df332f.faf868"
+            ],
+            [
+                "885ffffa.080e18"
+            ],
+            [
+                "2712672c.1d13f8"
+            ],
+            [
+                "7aee140.d0640ec"
+            ],
+            [
+                "b13de782.c6ddc"
+            ],
+            [
+                "c7680fed.33bbf8"
+            ]
+        ]
+    },
+    {
+        "id": "7b86ac13.87497c",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB1",
+        "x": 850,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "6247ee32.b17ef8",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB2",
+        "x": 850,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "dd1a72b6.e3d61",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB3",
+        "x": 850,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "249cc8b9.4b59d8",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA1",
+        "x": 850,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "9fd4e7ab.a96938",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA2",
+        "x": 850,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "dc095d95.5b65d",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA3",
+        "x": 850,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "854bf570.b84ed8",
+        "type": "http in",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "url": "ligar_ar",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "92a96b8a.b5159"
+            ]
+        ]
+    },
+    {
+        "id": "5390762.29af708",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB1",
+        "x": 850,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fa6bbb30.416ea",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB2",
+        "x": 850,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "44f5d6b9.9039f",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorB3",
+        "x": 850,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "e4482cd8.8bd8b",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA1",
+        "x": 850,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "398be47c.d2d384",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA2",
+        "x": 850,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d918b902.047338",
+        "type": "wiotp out",
+        "z": "4f9847c9.a2ee6",
+        "authType": "d",
+        "qs": "true",
+        "qsDeviceId": "7ac97241.9ef7fc",
+        "deviceKey": "",
+        "deviceType": "",
+        "deviceId": "",
+        "event": "event",
+        "format": "json",
+        "qos": "",
+        "name": "microcontroladorA3",
+        "x": 850,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "e09de503.7cdc38",
+        "type": "switch",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "property": "req.query.sala",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "a1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a6",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "e4482cd8.8bd8b"
+            ],
+            [
+                "398be47c.d2d384"
+            ],
+            [
+                "d918b902.047338"
+            ],
+            [
+                "5390762.29af708"
+            ],
+            [
+                "fa6bbb30.416ea"
+            ],
+            [
+                "44f5d6b9.9039f"
+            ]
+        ]
+    },
+    {
+        "id": "82d48693.ee2128",
+        "type": "http in",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "url": "ligar_luz",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 620,
+        "wires": [
+            [
+                "e09de503.7cdc38"
+            ]
+        ]
+    },
+    {
+        "id": "47150e33.1c8c88",
+        "type": "http in",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "url": "temp",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 880,
+        "wires": [
+            [
+                "debb5c44.eafe48"
+            ]
+        ]
+    },
+    {
+        "id": "80ca8050.fecb58",
+        "type": "http in",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "url": "ligar_pc",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 1180,
+        "wires": [
+            [
+                "5452df93.8917a8"
+            ]
+        ]
+    },
+    {
+        "id": "5452df93.8917a8",
+        "type": "switch",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "property": "req.query.sala",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "a1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "a6",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 350,
+        "y": 1180,
+        "wires": [
+            [
+                "249cc8b9.4b59d8"
+            ],
+            [
+                "9fd4e7ab.a96938"
+            ],
+            [
+                "dc095d95.5b65d"
+            ],
+            [
+                "7b86ac13.87497c"
+            ],
+            [
+                "6247ee32.b17ef8"
+            ],
+            [
+                "dd1a72b6.e3d61"
+            ]
+        ]
+    },
+    {
+        "id": "9dfca8ba.13a7e8",
+        "type": "http in",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "url": "/reservar",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd301f42.9b5e9",
+        "type": "function",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "func": "{\n    \"sala\": 1004,\n    \"dia\": 13\n    \"mes\": 11,\n    \"horarios\": [\n        {\n            \"ini\": \"08:00\",\n            \"fim\": \"10:00\"\n        },\n        {\n            \"ini\": \"12:00\",\n            \"fim\": \"14:00\"\n        },\n        {\n            \"ini\": \"18:00\",\n            \"fim\": \"19:00\"\n        },\n    ]   \n}\n*/\n\nconst verificaHorario = () => {\n    for (horario of horariosSala.horarios) {\n        if (salas.horario >= horario.ini && salas.horario < horario.fim) {\n            return \"ocupado\";\n        }\n    }\n\n    return \"livre\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 6,
+        "initialize": "",
+        "finalize": "",
+        "x": 350,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60ea0f26.127348",
+        "type": "http in",
+        "z": "4f9847c9.a2ee6",
+        "name": "reservar horario",
+        "url": "/ligar_ar",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 1560,
+        "wires": [
+            [
+                "dd68e424.280ca",
+                "ed1302f3.d83ab"
+            ]
+        ]
+    },
+    {
+        "id": "dd68e424.280ca",
+        "type": "file in",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "filename": "D:\\coisas de prog\\reserva.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 340,
+        "y": 1480,
+        "wires": [
+            [
+                "ed1302f3.d83ab"
+            ]
+        ]
+    },
+    {
+        "id": "ed1302f3.d83ab",
+        "type": "function",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "func": "context.data = context.data || {};\n\nif(msg.payload.horarequisitada!=null)\n{\n    context.data.horarequisitada=msg.payload.horarequisitada;\n}\nif(msg.payload.horarios!=null)\n{\n    context.data.horarios=msg.payload.horarios;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 1560,
+        "wires": [
+            [
+                "221ad1aa.9fcde6",
+                "8fa3613f.5aafa"
+            ]
+        ]
+    },
+    {
+        "id": "221ad1aa.9fcde6",
+        "type": "template",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 740,
+        "y": 1560,
+        "wires": [
+            [
+                "7c26313b.1f0448"
+            ]
+        ]
+    },
+    {
+        "id": "7c26313b.1f0448",
+        "type": "http response",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "8fa3613f.5aafa",
+        "type": "file",
+        "z": "4f9847c9.a2ee6",
+        "name": "",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 730,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    }
+]
